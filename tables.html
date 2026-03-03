@@ -4,6 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tables in HTML</title>
+    <style>
+      /* applico giusto due stili base alla tabella */
+      table {
+        /* applica un bordo esterno alla tabella */
+        border: 1px solid black;
+        /* collassa i bordi doppi in un bordo singolo */
+        border-collapse: collapse;
+      }
+      th,
+      td {
+        border: 1px solid black;
+      }
+    </style>
   </head>
   <body>
     <!-- oggi cominciamo a riempire il body con dei contenitori SEMANTICI -->
@@ -19,6 +32,64 @@
     <main>
       <!-- qui dentro mettiamo tutti i contenuti principali della pagina: paragrafi, immagini, liste etc. -->
       <!-- sarà qui dentro che metterò la mia tabella! -->
+      <table>
+        <!-- gli ulteriori sotto-contenitori <thead>, <tbody>, <tfoot> sono facoltativi -->
+        <thead>
+          <tr>
+            <!-- la prima riga di una table tipicamente si riserva per le intestazioni delle colonne -->
+            <!-- una colonna si intesta con il tag th (table header) -->
+            <th>Nome Paese</th>
+            <th>Capitale</th>
+            <th>Popolazione (mil.)</th>
+            <th>Piatto Tipico</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <!-- le righe successive si riservano per i DATI (records) -->
+            <!-- in una TR solitamente si mettono tanti TD (celle, table data) quante sono le colonne -->
+            <td>Italia</td>
+            <td>Roma</td>
+            <td>59</td>
+            <td>Pizza</td>
+          </tr>
+          <tr>
+            <td>Francia</td>
+            <td>Parigi</td>
+            <td>69</td>
+            <td>Baguette</td>
+          </tr>
+          <tr>
+            <td>Germania</td>
+            <td colspan="2">Berlino</td>
+            <!-- per fare in modo che la cella "Wurstel" finisca sotto alla colonna "Piatto Tipico" ho 2 opzioni -->
+            <!-- a) creo un <td> vuoto come 3° colonna -->
+            <!-- b) lasciare 3 colonne in totale, ma "far valere" la 2° come due spazi -->
+            <td>Wurstel</td>
+          </tr>
+          <tr>
+            <td rowspan="3">Sud Africa</td>
+            <td>Pretoria</td>
+            <td>10</td>
+            <td>Bobotie</td>
+          </tr>
+          <tr>
+            <td>Citta del capo</td>
+            <td>10</td>
+            <td>Bobotie</td>
+          </tr>
+          <tr>
+            <td>Bloemfontein</td>
+            <td>10</td>
+            <td>Bobotie</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="4">Precisissima tabella internazionale</td>
+          </tr>
+        </tfoot>
+      </table>
     </main>
     <footer>
       <!-- qui dentro metteremmo link a cookie/privacy policies, link interni, copyright etc. -->
