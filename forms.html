@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forms in HTML</title>
+  </head>
+  <body>
+    <header>
+      <h1>I form in HTML</h1>
+    </header>
+    <main>
+      <h3>
+        In HTML i form si dichiarano con il loro tag apposito: &lt;form&gt;
+      </h3>
+      <form>
+        <!-- i form nel frontend sono fondamentali per RACCOGLIERE DATI dagli utenti -->
+        <!-- il singolo campo da compilare si dichiara con un tag <input /> (auto-conclusivo) -->
+        <div>
+          <label for="firstname">Il tuo nome</label>
+          <input
+            id="firstname"
+            type="text"
+            placeholder="Mario Rossi"
+            minlength="3"
+            maxlength="30"
+            required
+          />
+        </div>
+        <div>
+          <label for="age">La tua età</label>
+          <input id="age" type="number" placeholder="123" min="0" max="99" />
+        </div>
+        <div>
+          <label for="phone">Il tuo n. di telefono</label>
+          <input id="phone" type="tel" placeholder="000232" />
+        </div>
+        <div>
+          <!-- questo tag button, essendo inserito all'interno di un form, funzionerà AUTOMATICAMENTE
+            come elemento di INVIO del form! -->
+          <button type="button">NON FA NIENTE</button>
+          <button>INVIA FORM</button>
+          <!-- il secondo bottone invia il form perchè di default essendo <button> dentro <form> riceve
+            un type="submit" -->
+        </div>
+      </form>
+    </main>
+    <footer>
+      <p>EPICODE 2026</p>
+    </footer>
+  </body>
+</html>
